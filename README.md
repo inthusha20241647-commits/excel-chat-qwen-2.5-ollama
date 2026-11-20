@@ -14,9 +14,13 @@ A strict system prompt tells the model to answer only from the data and to say
 so when a question can't be answered from the available columns.
 
 ## Requirements
-- Node.js 18+
-- [Ollama](https://ollama.com) installed and running
-- The model: `ollama pull qwen2.5:3b`
+![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=nodedotjs&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-installed%20%26%20running-000000?logo=ollama&logoColor=white)
+![Model](https://img.shields.io/badge/Model-qwen2.5%3A3b-615CED)
+
+Pull the model:
+
+    ollama pull qwen2.5:3b
 
 ## Setup
     npm install xlsx
@@ -34,10 +38,10 @@ Place your own `sales.xlsx` in the project folder.
 ## Findings
 | Question type | Result |
 |---|---|
-| Direct lookup | (your observation) |
-| Filtering and listing | (your observation) |
-| Calculations | (your observation) |
-| Unanswerable | (your observation) |
+| Direct lookup | Accurate |
+| Filtering and listing | Missing Items |
+| Calculations | Inconsistent |
+| Unanswerable | The question cannot be answered from the given data |
 
 ## Limitations
 - Small models can make mistakes on sums, averages, and counts
